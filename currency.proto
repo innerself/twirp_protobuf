@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package twirp.currency_rates;
+option go_package = "currency_rates";
+
+// CurrencyRates service get actual currency rates
+service CurrencyRates {
+  // MakeHat produces a hat of mysterious, randomly-selected color!
+  rpc GetDollarRate(Nothing) returns (Rates);
+}
+
+message Nothing {
+}
+
+message Rates {
+  string rates = 1;
+}
